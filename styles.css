@@ -1,0 +1,653 @@
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #fafaf6;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: center; /* Center the content */
+    align-items: center;
+    background-color: #fafaf6;
+    padding: 40px 0;
+}
+
+.header-container {
+    display: flex;
+    justify-content: center; /* Center the container */
+    align-items: center;
+    width: 100%;
+    position: relative;
+}
+
+.logo {
+    position: absolute;
+    left: 20px; 
+}
+
+.logo img {
+    height: 100px;
+    width: auto;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #020303; 
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: #393e40; 
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: grid;
+    gap: 20px;
+    padding-top: 120px;
+}
+
+footer {
+    background-color: #b6c4ca; 
+    padding: 10px 10px;
+    text-align: center;
+    Margin-top: 30px;
+}
+
+footer a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #020303; 
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-icons img {
+    width: 30px; 
+    height: 30px; 
+}
+
+
+/* Home page specific styles */
+
+.hero {
+    position: relative;
+    text-align: center;
+    color: white;
+    padding-top: 100px;
+}
+
+.hero-banner img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+
+.hero-text {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.hero-text h2 {			/* Welcome to*/
+    font-size: 30px;
+    font-weight: normal;
+    margin-bottom: 5px;
+    color: #383c3e; 
+}
+
+.hero-text h1 {			/* Milin's Kitchen */
+    font-size: 60px;
+    margin: 0;
+    color: #121313;
+}
+
+.about {
+    padding: 90px 10px 20px 10px; /* Adjust bottom padding to reduce space */
+    text-align: center;
+}
+
+.about p {
+    font-size: 20px;
+    color: #121313;
+    max-width: 800px;
+    margin: 0 auto 10px; /* Reduce bottom margin */
+}
+
+.latest-blog-post {
+    padding: 20px 50px; 
+    margin-top: 0px; 
+}
+
+.latest-blog-post h2 {
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 40px; 
+}
+
+.hero-image {
+    flex: 1;
+    max-width: 50%;
+}
+
+.hero-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.hero-content {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.hero-content h1 {
+    font-size: 36px;
+    color: #020303; 
+}
+
+.hero-content p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #505759; 
+}
+
+.featured-recipes {
+    padding: 0px 10px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.featured-recipes h2 { 
+    font-size: 50px;
+    margin-bottom: 40px;
+    color: #121313
+}
+
+.recipes-grid {
+    display: flex;
+    gap: 60px;
+    justify-content: center;
+}
+
+.recipe {
+    width: 300px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(227, 210, 232, 1);
+    background-color: rgba(227, 210, 232, 0.4); 
+    margin-bottom: 60px;
+}
+
+.recipe img {
+    width: 100%;
+    height: auto;
+}
+
+.recipe h3 {
+    font-size: 24px;
+    color: #2e2b4f; 
+    margin-top: 10px;
+}
+
+.recipe p {
+    font-size: 18px;
+    color: #505759; 
+    margin-top: 10px;
+}
+
+/* .newsletter {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.newsletter h2 {
+    color: #020303; 
+}
+
+.newsletter form {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.newsletter input[type="email"] {
+    border: 1px solid #020303; 
+}
+
+.newsletter button[type="submit"] {
+    background-color: #2e2b4f; 
+    color: #fff; 
+} */
+
+
+/* Recipes page specific styles */
+
+.recipes-hero {
+    position: relative;
+    text-align: center;
+    color: #333;
+    padding: 20px 20px 40px 20px;
+    background: url('images/banner.png') center center/cover no-repeat;
+    border-radius: 20px;
+    box-shadow: 0 2px 4px rgba(210, 226, 232, 1);
+}
+
+.recipes-hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+.recipes-hero h1 {
+    font-size: 56px;
+    margin-bottom: 10px;
+}
+
+.recipes-hero p {
+    font-size: 20px;
+    color: #020303; 
+}
+
+.recipe-categories {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 20px 0;
+}
+
+.category {
+    text-align: center;
+    background-color: rgba(227, 210, 232, 0.1);
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.category img {
+    width: 100%;
+    height: auto;
+}
+
+.category h2 {
+    font-size: 24px;
+}
+
+/* Blog page specific styles */
+
+.blog-hero {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgba(210, 232, 229, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(95, 102, 104, 0.3);
+    transition: background-color 0.3s ease;
+}
+
+.blog-hero-link, 
+.blog-hero-link * {
+    text-decoration: none;
+    color: inherit;
+}
+
+.hero-image {
+    flex: 1;
+    max-width: 50%;
+}
+
+.hero-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.hero-content {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero-content h2 {
+    color: #2e2b4f;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.hero-content h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #505759; 
+}
+
+/* Commenting out the blog-categories section
+.blog-categories {
+    display: flex;
+    justify-content: center;
+    background-color: #fcfafa;
+}
+
+.category-buttons {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.category-button {
+    background-color: #36454f;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    flex: 1;
+    text-align: center;
+}
+*/
+
+.custom-hr {
+    border: 0;
+    border-top: 10px solid #36454f; 
+    margin: 20px 0;
+    border-radius: 5px;
+}
+
+/* Blog Content Grid Layout */
+
+.posts-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns in a row */
+    gap: 20px; /* Space between the posts */
+}
+
+.post {
+    background-color: rgba(243, 232, 252, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(95, 102, 104, 0.3);
+    transition: background-color 0.3s ease;
+    text-align: center; /* Center content inside each post */
+}
+
+.post a {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+.post img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.post h3 {
+    font-size: 18px;
+    color: #2e2b4f;
+    margin-bottom: 10px;
+}
+
+.post h4 {
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+.post p {
+    font-size: 18px;
+    color: #666;
+}
+
+
+/* Random Thought section styles 
+
+.random-thought {
+    padding: 0px;
+    Margin-top: -65px;
+    Text-align: center
+}
+
+.random-thought h3 {
+    font-size: 24px;
+    color: #2e2b4f;
+    margin-bottom: 10px;
+}
+
+.random-thought p {
+    font-size: 18px;
+    color: #505759;
+    font-style: italic;
+    margin: 0;
+} */
+
+/*
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    Margin-top: -20px;
+}
+
+.search-box {
+    display: flex;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.search-box input {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    outline: none;
+}
+
+.search-button {
+    background-color: #2e2b4f;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+*/
+
+
+/* Appetizers page specific styles */
+
+.recipe-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.recipe-item {
+    width: 300px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    background-color: white;
+    text-decoration: none;
+}
+
+.recipe-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.recipe-item h2 {
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+.recipe-item p {
+    font-size: 16px;
+    color: #666;
+    padding: 0 10px 10px;
+}
+
+/* Blog Post Page Styles */
+
+.blog-post {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fafaf6;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.blog-post h1 {
+    font-size: 36px;
+    color: #2e2b4f;
+    margin-bottom: 20px;
+}
+
+.blog-post .post-meta {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.blog-post .post-image {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.blog-post p {
+    font-size: 18px;
+    color: #505759;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.blog-post h2 {
+    font-size: 28px;
+    color: #2e2b4f;
+    margin-bottom: 20px;
+}
+
+.blog-post blockquote {
+    padding: 20px;
+    background-color: #d2e8e5;
+    border-left: 5px solid #2e2b4f;
+    margin: 20px 0;
+    color: #2e2b4f;
+    font-style: italic;
+}
+
+/* Sidebar Styles */
+
+.sidebar {
+    width: 300px;
+    margin-top: 40px;
+}
+
+.widget {
+    margin-bottom: 40px;
+}
+
+.widget h3 {
+    font-size: 24px;
+    color: #2e2b4f;
+    margin-bottom: 20px;
+}
+
+.widget p, .widget ul {
+    font-size: 18px;
+    color: #505759;
+}
+
+.widget ul {
+    list-style: none;
+    padding: 0;
+}
+
+.widget ul li {
+    margin-bottom: 10px;
+}
+
+.widget ul li a {
+    text-decoration: none;
+    color: #2e2b4f;
+    transition: color 0.3s ease;
+}
+
+.widget ul li a:hover {
+    color: #d2e8e5;
+}
+
