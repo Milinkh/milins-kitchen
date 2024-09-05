@@ -555,16 +555,25 @@ footer a {
 .recipe-item p {
     font-size: 16px;
     color: #666;
-    padding: 0 10px 10px;
+    padding: 0 10px 10px;s
+}
+
+/* Apply background image only to the blog post page */
+.blog-post-page {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background: url('images/blog-background.png') no-repeat center center fixed; /* Background for the blog post page */
+    background-size: cover;
 }
 
 /* Blog Post Page Styles */
-
 .blog-post {
     max-width: 800px;
     margin: 40px auto;
     padding: 20px;
-    background-color: #fafaf6;
+    background-color: #fafaf6; /* Keep the box color */
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
@@ -609,6 +618,7 @@ footer a {
     color: #2e2b4f;
     font-style: italic;
 }
+
 
 /* Sidebar Styles */
 
