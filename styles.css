@@ -5,6 +5,7 @@ body {
     padding: 0;
     color: #333;
     background-color: #fafaf6;
+    overflow-x: hidden; /* Prevent horizontal scroll by default */
 }
 
 header {
@@ -91,7 +92,7 @@ nav ul li a {
 }
 
 main {
-    max-width: 1200px;
+    max-width: 1200px; 
     margin: 0 auto;
     padding: 20px;
     display: grid;
@@ -123,9 +124,7 @@ footer a {
     height: 30px; 
 }
 
-
 /* Home page specific styles */
-
 .hero {
     position: relative;
     text-align: center;
@@ -146,14 +145,14 @@ footer a {
     transform: translate(-50%, -50%);
 }
 
-.hero-text h2 {			/* Welcome to*/
+.hero-text h2 { /* Welcome to */
     font-size: 30px;
     font-weight: normal;
     margin-bottom: 5px;
     color: #383c3e; 
 }
 
-.hero-text h1 {			/* Milin's Kitchen */
+.hero-text h1 { /* Milin's Kitchen */
     font-size: 60px;
     margin: 0;
     color: #121313;
@@ -174,6 +173,10 @@ footer a {
 .latest-blog-post {
     padding: 20px 50px; 
     margin-top: 0px; 
+    width: 1000px; /* Set a percentage width to retain the shape */
+    margin: 0 auto; /* Center align the box */
+    border-radius: 20px; /* Ensures the oval shape */
+    background-color: #fafaf6; /* Ensure background is maintained */
 }
 
 .latest-blog-post h2 {
@@ -188,9 +191,12 @@ footer a {
 }
 
 .hero-image img {
-    width: 100%;
-    height: auto;
+    width: 50%; /* Set the image width to 50% of its container */
+    max-width: 500px; /* Maximum width for the image */
+    height: auto; /* Maintain aspect ratio */
     border-radius: 10px;
+    margin: 20px auto; /* Center the image horizontally */
+    display: block; /* Ensures the margin auto centers the image */
 }
 
 .hero-content {
@@ -211,7 +217,16 @@ footer a {
     color: #505759; 
 }
 
-.featured-recipes {
+/* Media Query for Fixed Width and Scrolling */
+@media (max-width: 1000px) { /* When the window width is 600px or less */
+    body {
+        width: 1100px; /* Fixed width */
+        overflow-x: auto; /* Allow horizontal scrolling */
+    }
+}
+
+
+/* .featured-recipes {
     padding: 0px 10px;
     margin-bottom: 20px;
     text-align: center;
@@ -256,7 +271,7 @@ footer a {
     margin-top: 10px;
 }
 
-/* .newsletter {
+.newsletter {
     padding: 40px 20px;
     text-align: center;
 }
@@ -558,7 +573,7 @@ footer a {
     padding: 0 10px 10px;s
 }
 
-/* Apply background image only to the blog post page */
+/* Blog Post Page Styles */
 .blog-post-page {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -568,7 +583,6 @@ footer a {
     background-size: cover;
 }
 
-/* Blog Post Page Styles */
 .blog-post {
     max-width: 800px;
     margin: 40px auto;
