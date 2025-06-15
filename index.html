@@ -5,70 +5,150 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Milin's Kitchen</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="images/main-logo.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700;800&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+    <link rel="icon" href="images/milins-kitchen-logo.png" type="image/png">
 </head>
 <body>
-    <header>
-        <div class="header-container">
-            <div class="logo">
-                <a href="index.html">
-                    <img src="images/logo.png" alt="Milin's Kitchen Logo">
-                </a>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <!-- 
-                    <li class="dropdown">
-                        <a href="recipes.html" class="dropbtn">Recipes</a>
-                        <div class="dropdown-content">
-                            <a href="appetizers.html">Appetizers</a>
-                            <a href="#main-dishes">Main Dishes</a>
-                            <a href="#desserts">Desserts</a>
-                            <a href="#salads">Salads</a>
-                            <a href="#soups">Soups</a>
-                            <a href="#drinks">Drinks</a>
-                            <a href="#snacks">Snacks</a>
-                            <a href="#sauces">Sauces</a>
-                        </div>
-                    </li>  
-                    -->
-                    <li><a href="blog.html">Blog</a></li>
-                    <!-- <li><a href="#">About</a></li> -->
-                </ul>
-            </nav>
+    <!-- Top Thin Header -->
+    <div class="top-header">
+      <div class="page-container top-header-inner">
+        <div class="top-header-left">
+          <a href="index.html">
+            <img src="images/milins-kitchen-logo.png" alt="Milin's Kitchen Logo" class="top-logo">
+          </a>
         </div>
+        <div class="top-header-right">
+          <a href="https://www.instagram.com" target="_blank"><img src="images/instagram.png" alt="Instagram"></a>
+          <a href="https://www.facebook.com" target="_blank"><img src="images/facebook.png" alt="Facebook"></a>
+          <a href="https://www.twitter.com" target="_blank"><img src="images/x.png" alt="Twitter"></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Navigation -->
+    <header class="main-header">
+      <div class="page-container">
+        <nav class="main-nav">
+          <ul class="nav-left">
+              <li><a href="recipes.html">Recipes</a></li>
+              <li><a href="blog.html">Blog</a></li>
+          </ul>
+
+          <div class="nav-center">
+              <a href="index.html" class="site-title">Milin's Kitchen</a>
+          </div>
+
+          <ul class="nav-right">
+              <li><a href="#">About</a></li>
+              <li><a href="#">Restaurant Replica</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
+
+    <div class="page-container">
     
-    <section class="hero">
-        <div class="hero-banner">
-            <img src="images/banner.png" alt="Milin's Kitchen Banner">
-            <div class="hero-text">
-                <h2>Welcome to</h2>
-		        <h1>Milin's Kitchen</h1>
-            </div>
+    <section class="hero-carousel">
+      <div class="carousel-track">
+    
+        <!-- Slide 1: Full Banner -->
+        <div class="carousel-slide slide-banner">
+          <img src="images/banner.png" alt="Welcome Banner">
+          <div class="carousel-center-text">
+            <h1>Welcome to My Kitchen</h1>
+          </div>
         </div>
-    </section>
-    
-    <section class="about">
-        <p>I'm excited to share my love for food and cooking with you. Whether you're here for simple recipes or to explore new culinary ideas, I hope you find something that inspires you. Let's enjoy this journey of flavors together!</p>
+
+        <!-- Slide 2: Latest Blog Post -->
+        <div class="carousel-slide slide-split slide-blog">
+          <div class="slide-text">
+            <h2 class="blog-heading">Latest Blog Post</h2>
+            <p>The Menu Experience: Three Ways to Make Dining Out Better</p>
+            <a href="blog-post.html" class="outlined-btn">Read Blog Post</a>
+          </div>
+          <div class="slide-image">
+            <img src="images/chickpea-dish.png" alt="Latest Blog Post">
+          </div>
+        </div>
+
+        <!-- Slide 3: Featured Recipe -->
+        <div class="carousel-slide slide-split slide-recipe">
+          <div class="slide-image">
+            <img src="images/chickpea-dish.png" alt="Featured Recipe">
+          </div>
+          <div class="slide-text right-aligned">
+            <h2 class="blog-heading">Featured Recipe</h2>
+            <p>Restaurant-style toast made at home.</p>
+            <a href="#" class="outlined-btn">View Recipe</a>
+          </div>
+        </div>
+
+      </div> <!-- ✅ End of .carousel-track -->
+
+      <!-- Carousel Indicators -->
+      <div class="carousel-indicators">
+        <span class="indicator active" data-slide="0"></span>
+        <span class="indicator" data-slide="1"></span>
+        <span class="indicator" data-slide="2"></span>
+      </div>
     </section>
 
-    <section class="latest-blog-post">
-        <h2>Latest Blog Post</h2>
-        <a href="blog-post.html" class="blog-hero-link">
-            <div class="blog-hero">
-                <div class="hero-image">
-                    <img src="images/latest_blog_post.png" alt="Latest Blog Post">
-                </div>
-                <div class="hero-content">
-                    <h1>The Menu Experience: Three Ways to Make Dining Out Better</h1>
-                    <p>Discover three simple yet impactful changes to the menu experience that can make dining out even more enjoyable and memorable.</p>
-                </div>
-            </div>
-        </a>
-    </section>
     
+    <section class="about-intro">
+      <div class="about-container">
+        <div class="about-image">
+          <img src="images/portrait.png" alt="Milin Khunkhun">
+        </div>
+        <div class="about-text">
+          <h2>Hi, I’m Milin</h2>
+          <p>This is my kitchen — a space where I explore flavor, culture, and the joy of cooking. Whether it's a simple recipe or a story stirred in, there's always something to taste and talk about.</p>
+          <a href="#" class="about-link">Read More →</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="featured-blog-categories">
+      <div class="blog-grid-row">
+
+        <div class="blog-column">
+          <a href="blog.html#service" class="category-btn">Service</a>
+          <a href="blog-post.html" class="blog-card">
+            <img src="images/latest_blog_post copy.png" alt="Post Thumbnail">
+            <h3>The Menu Experience</h3>
+            <p>Three ways to make dining out better.</p>
+          </a>
+        </div>
+
+        <div class="blog-column">
+          <a href="blog.html#innovation" class="category-btn">Innovation</a>
+          <a href="blog-post.html" class="blog-card">
+            <img src="images/spheres copy.png" alt="Post Thumbnail">
+            <h3>Designing with Flavor</h3>
+            <p>What food layout can teach us about focus and flow.</p>
+          </a>
+        </div>
+
+        <div class="blog-column">
+          <a href="blog.html#kitchen-notes" class="category-btn">Kitchen Notes</a>
+          <a href="blog-post.html" class="blog-card">
+            <img src="images/chai copy.png" alt="Post Thumbnail">
+            <h3>Chai as a Moment</h3>
+            <p>On slowness, sipping, and the kitchen as a reset space.</p>
+          </a>
+        </div>
+
+      </div>
+
+      <div class="explore-more">
+        <a href="blog.html">Explore More →</a>
+      </div>
+    </section>
+
+
+
+
+
+
     <!-- 
     <section class="featured-recipes">
         <h2>Featured Recipes</h2>
@@ -92,28 +172,63 @@
     </section>  
     -->
 
-    <!-- 
-    <section class="newsletter">
-        <h2>Milin's Kitchen Newsletter</h2>
-        <form>
-            <input type="email" placeholder="Your email">
-            <button type="submit">Subscribe</button>
-        </form>
-    </section> 
-    -->
 
-    <footer>
+    </div>
+
+      <footer>
         <div class="social-icons">
             <a href="https://www.instagram.com" target="_blank">
                 <img src="images/instagram.png" alt="Instagram Logo">
             </a>
+            <!-- 
             <a href="https://www.facebook.com" target="_blank">
                 <img src="images/facebook.png" alt="Facebook Logo">
             </a>
 	        <a href="https://www.twitter.com" target="_blank">
                 <img src="images/x.png" alt="X Logo">
             </a> 
+            -->
         </div>
-    </footer>
+      </footer>
+
+    <script>
+      const track = document.querySelector('.carousel-track');
+      const indicators = document.querySelectorAll('.indicator');
+      let currentSlide = 0;
+      const totalSlides = indicators.length;
+      let slideInterval;
+
+      function goToSlide(slideIndex) {
+        track.style.transform = `translateX(-${slideIndex * 100}%)`;
+        indicators.forEach(i => i.classList.remove('active'));
+        indicators[slideIndex].classList.add('active');
+        currentSlide = slideIndex;
+      }
+
+      function startAutoSlide() {
+        slideInterval = setInterval(() => {
+          const next = (currentSlide + 1) % totalSlides;
+          goToSlide(next);
+        }, 5000);
+      }
+
+      // Start initially
+      startAutoSlide();
+
+      // Manual navigation
+      indicators.forEach(indicator => {
+        indicator.addEventListener('click', () => {
+          clearInterval(slideInterval);
+          goToSlide(parseInt(indicator.dataset.slide));
+          startAutoSlide(); // restart timer after user clicks
+        });
+      });
+    </script>
+
+
+
+
+
+
 </body>
 </html>

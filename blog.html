@@ -1,122 +1,316 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Milin's Kitchen</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="images/main-logo.png" type="image/png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Milin's Kitchen</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700;800&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+  <link rel="icon" href="images/milins-kitchen-logo.png" type="image/png">
 </head>
 <body>
-    <header>
-        <div class="header-container">
-            <div class="logo">
-                <a href="index.html">
-                    <img src="images/logo.png" alt="Milin's Kitchen Logo">
-                </a>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
+  <!-- Top Thin Header -->
+  <div class="top-header">
+    <div class="page-container top-header-inner">
+      <div class="top-header-left">
+        <a href="index.html">
+          <img src="images/milins-kitchen-logo.png" alt="Milin's Kitchen Logo" class="top-logo">
+        </a>
+      </div>
+      <div class="top-header-right">
+        <a href="https://www.instagram.com" target="_blank"><img src="images/instagram.png" alt="Instagram"></a>
+        <a href="https://www.facebook.com" target="_blank"><img src="images/facebook.png" alt="Facebook"></a>
+        <a href="https://www.twitter.com" target="_blank"><img src="images/x.png" alt="Twitter"></a>
+      </div>
+    </div>
+  </div>
 
-                    <!-- Commented out the Recipes dropdown menu -->
-                    <!-- <li class="dropdown">
-                        <a href="recipes.html" class="dropbtn">Recipes</a>
-                        <div class="dropdown-content">
-                            <a href="appetizers.html">Appetizers</a>
-                            <a href="#main-dishes">Main Dishes</a>
-                            <a href="#desserts">Desserts</a>
-                            <a href="#salads">Salads</a>
-                            <a href="#soups">Soups</a>
-                            <a href="#drinks">Drinks</a>
-                            <a href="#snacks">Snacks</a>
-                            <a href="#sauces">Sauces</a>
-                        </div>
-                    </li> -->
-                    <li><a href="blog.html">Blog</a></li>
-                    <!-- <li><a href="#">About</a></li> -->
-                </ul>
-            </nav>
+  <!-- Main Navigation -->
+  <header class="main-header">
+    <div class="page-container">
+      <nav class="main-nav">
+        <ul class="nav-left">
+            <li><a href="recipes.html">Recipes</a></li>
+            <li><a href="blog.html">Blog</a></li>
+        </ul>
+
+        <div class="nav-center">
+            <a href="index.html" class="site-title">Milin's Kitchen</a>
         </div>
-    </header>
 
-    <main>
-        <section class="blog-hero">
-            <a href="blog-post.html" class="blog-hero-link">
-                <div class="hero-image">
-                <!--    <img src="latest_blog_post.png" alt="Delicious Food">  -->
-                </div>
-                <div class="hero-content">
-                    <h2>Restaurant Insights</h2>
-                    <h1>The Menu Experience: Three Ways to Make Dining Out Better</h1>
-                    <p>Discover three simple yet impactful changes to the menu experience that can make dining out even more enjoyable and memorable.</p>
-                </div>
-            </a>
-        </section>
+        <ul class="nav-right">
+            <li><a href="#">About</a></li>
+            <li><a href="#">Restaurant Replica</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
 
-        <hr class="custom-hr">
 
-        <!-- Commented out the blog categories section -->
-        <!-- <section class="blog-categories">
-            <div class="category-buttons">
-                <a href="#" class="category-button">Cooking</a>
-                <a href="#" class="category-button">Traveling</a>
-                <a href="#" class="category-button">Restaurant Insights</a>
-            </div>
-        </section> -->
+  <!-- Main Blog Content -->
+  <main class="page-container">
+    <!-- Top Row: Search + Sort -->
+    <div class="blog-toolbar-top">
+      <input
+        type="text"
+        id="blogSearchInput"
+        placeholder="Search blog posts..."
+      />
+      <div class="blog-sort">
+        <label for="sortSelect">Sort by:</label>
+        <select id="sortSelect">
+          <option value="newest">Newest First</option>
+          <option value="oldest">Oldest First</option>
+          <option value="title-asc">Title A–Z</option>
+          <option value="title-desc">Title Z–A</option>
+        </select>
+      </div>
+    </div>
 
-        <section class="blog-content">
-            <div class="posts-grid">
-                <article class="post">
-                    <a href="#">
-                        <img src="images/spheres.png" alt="Recipe Post 1">
-                        <h3>Traveling</h3>
-                        <h4>Amazon Spheres: Bananas, Smiles, and Stunning Design</h4>
-                        <p>A fun exploration of the Amazon Spheres, where free bananas and unexpected architecture bring a little joy to downtown Seattle.</p>
-                    </a>
-                </article>
-                <article class="post">
-                    <a href="#">
-                        <img src="images/toast.png" alt="Cooking Tips">
-                        <h3>Restaurant Insights</h3>
-                        <h4>Customer's Take on Toast</h4>
-                        <p>A personal reflection on how the Toast platform has impacted my dining experiences.</p>
-                    </a>
-                </article>
-                <article class="post">
-                    <a href="#">
-                        <img src="images/chai.png" alt="Dessert Post">
-                        <h3>Traveling</h3>
-                        <h4>A Taste of Kolkata Chai in NYC</h4>
-                        <p>Sharing my experience at Kolkata Chai Co. in New York City, where the authentic chai transported me straight to the streets of India.</p>
-                    </a>
-                </article>
-                <!-- Add more posts as needed -->
-            </div>
-        </section>
+    <!-- Category Filter Buttons -->
+    <div class="blog-filters">
+      <button class="filter-btn active" data-category="all">All</button>
+      <button class="filter-btn" data-category="service">Service</button>
+      <button class="filter-btn" data-category="innovation">Innovation</button>
+      <button class="filter-btn" data-category="kitchen-notes">Kitchen Notes</button>
+    </div>
 
-        <!-- Commented out the Random Thought section -->
-        <!-- <aside class="sidebar">
-            <div class="random-thought">
-                <h3>Random Thought</h3>
-                <p>“Attentive, friendly service can turn a good meal into a great one. It’s not just about the food; it’s about how you’re treated.”</p>
-            </div>
-        </aside> -->
+    <!-- Blog Cards Grid -->
+    <div class="blog-grid-row" id="blog-posts">
 
-    </main>
-    
-    <footer>
-        <div class="social-icons">
-            <a href="https://www.instagram.com" target="_blank">
-                <img src="images/instagram.png" alt="Instagram Logo">
-            </a>
-            <a href="https://www.facebook.com" target="_blank">
-                <img src="images/facebook.png" alt="Facebook Logo">
-            </a>
-	        <a href="https://www.twitter.com" target="_blank">
-                <img src="images/x.png" alt="X Logo">
-            </a> 
+      <div class="blog-card" data-category="service">
+        <div class="blog-card-image">
+          <img src="images/latest_blog_post copy.png" alt="The Menu Experience">
+          <span class="blog-category-label">Service</span>
         </div>
-    </footer>
+        <div class="blog-card-content">
+          <p class="blog-date">June 5, 2025</p>
+          <h3>The Menu Experience</h3>
+          <p>Three ways to make dining out better.</p>
+          <a href="blog-post.html" class="read-more">Read More →</a>
+        </div>
+      </div>
+
+      <div class="blog-card" data-category="innovation">
+        <div class="blog-card-image">
+          <img src="images/spheres copy.png" alt="Designing with Flavor">
+          <span class="blog-category-label">Innovation</span>
+        </div>
+        <div class="blog-card-content">
+          <p class="blog-date">May 25, 2025</p>
+          <h3>Designing with Flavor</h3>
+          <p>What food layout can teach us about focus and flow.</p>
+          <a href="blog-post.html" class="read-more">Read More →</a>
+        </div>
+      </div>
+
+      <div class="blog-card" data-category="kitchen-notes">
+        <div class="blog-card-image">
+          <img src="images/chai copy.png" alt="Chai as a Moment">
+          <span class="blog-category-label">Kitchen Notes</span>
+        </div>
+        <div class="blog-card-content">
+          <p class="blog-date">May 12, 2025</p>
+          <h3>Chai as a Moment</h3>
+          <p>On slowness, sipping, and the kitchen as a reset space.</p>
+          <a href="blog-post.html" class="read-more">Read More →</a>
+        </div>
+      </div>
+
+      <!-- MOCK BLOG CARDS (more hidden posts for infinite scroll) -->
+
+      <div class="blog-card" data-category="service">
+            <div class="blog-card-image">
+                  <img src="images/chickpea-dish.png" alt="Table Touches">
+                  <span class="blog-category-label">Service</span>
+            </div>
+            <div class="blog-card-content">
+                  <p class="blog-date">May 2, 2025</p>
+                  <h3>Table Touches</h3>
+                  <p>How to elevate guest service without being intrusive.</p>
+                  <a href="blog-post.html" class="read-more">Read More →</a>
+            </div>
+      </div>
+
+      <div class="blog-card" data-category="innovation">
+            <div class="blog-card-image">
+                  <img src="images/spheres copy.png" alt="Kitchen as Studio">
+                  <span class="blog-category-label">Innovation</span>
+            </div>
+            <div class="blog-card-content">
+                  <p class="blog-date">April 20, 2025</p>
+                  <h3>The Kitchen as Studio</h3>
+                  <p>Creative workflows behind plating, prep, and process.</p>
+                  <a href="blog-post.html" class="read-more">Read More →</a>
+            </div>
+      </div>
+
+      <div class="blog-card" data-category="kitchen-notes">
+            <div class="blog-card-image">
+                  <img src="images/chai copy.png" alt="Cleaning Rituals">
+                  <span class="blog-category-label">Kitchen Notes</span>
+            </div>
+            <div class="blog-card-content">
+                  <p class="blog-date">April 7, 2025</p>
+                  <h3>Cleaning as a Ritual</h3>
+                  <p>When tidying up becomes a mental reset — not a chore.</p>
+                  <a href="blog-post.html" class="read-more">Read More →</a>
+            </div>
+      </div>
+
+      <div class="blog-card" data-category="kitchen-notes">
+            <div class="blog-card-image">
+                  <img src="images/chickpea-dish.png" alt="Mise en Place Mindset">
+                  <span class="blog-category-label">Kitchen Notes</span>
+            </div>
+            <div class="blog-card-content">
+                  <p class="blog-date">March 18, 2025</p>
+                  <h3>The Mise en Place Mindset</h3>
+                  <p>How prep culture sharpens your habits in and out of the kitchen.</p>
+                  <a href="blog-post.html" class="read-more">Read More →</a>
+            </div>
+      </div>
+
+      <div class="blog-card" data-category="service">
+            <div class="blog-card-image">
+                  <img src="images/latest_blog_post copy.png" alt="Anticipating Guests">
+                  <span class="blog-category-label">Service</span>
+            </div>
+            <div class="blog-card-content">
+                  <p class="blog-date">March 3, 2025</p>
+                  <h3>Anticipating the Ask</h3>
+                  <p>Service tips for noticing what guests need before they ask.</p>
+                  <a href="blog-post.html" class="read-more">Read More →</a>
+            </div>
+      </div>
+
+      <div class="blog-card" data-category="innovation">
+            <div class="blog-card-image">
+                  <img src="images/spheres copy.png" alt="Smart Tools in the Kitchen">
+                  <span class="blog-category-label">Innovation</span>
+            </div>
+            <div class="blog-card-content">
+                  <p class="blog-date">Feb 15, 2025</p>
+                  <h3>Smart Tools in the Kitchen</h3>
+                  <p>Exploring AI-enhanced timers, scales, and appliances.</p>
+                  <a href="blog-post.html" class="read-more">Read More →</a>
+            </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="social-icons">
+      <a href="https://www.instagram.com" target="_blank"><img src="images/instagram.png" alt="Instagram Logo"></a>
+      <a href="https://www.facebook.com" target="_blank"><img src="images/facebook.png" alt="Facebook Logo"></a>
+      <a href="https://www.twitter.com" target="_blank"><img src="images/x.png" alt="Twitter Logo"></a>
+    </div>
+  </footer>
+
+<script>
+  const filterButtons = document.querySelectorAll('.filter-btn');
+  const blogCards = Array.from(document.querySelectorAll('.blog-card'));
+  const blogPostsContainer = document.getElementById('blog-posts');
+  const searchInput = document.getElementById('blogSearchInput');
+  const sortSelect = document.getElementById('sortSelect');
+
+  let currentCategory = 'all';
+  let visibleCount = 0;
+  const batchSize = 6;
+
+  function applyFilters(card) {
+    const searchText = searchInput.value.toLowerCase();
+    const title = card.querySelector('h3').textContent.toLowerCase();
+    const excerpt = card.querySelector('p').textContent.toLowerCase();
+    const cardCategory = card.dataset.category;
+
+    const matchesSearch = title.includes(searchText) || excerpt.includes(searchText);
+    const matchesCategory = currentCategory === 'all' || cardCategory === currentCategory;
+    return matchesSearch && matchesCategory;
+  }
+
+  function sortCards(cards) {
+    const sortBy = sortSelect.value;
+
+    return [...cards].sort((a, b) => {
+      if (sortBy === 'title-asc' || sortBy === 'title-desc') {
+        const aTitle = a.querySelector('h3').textContent.toLowerCase();
+        const bTitle = b.querySelector('h3').textContent.toLowerCase();
+        return sortBy === 'title-asc'
+          ? aTitle.localeCompare(bTitle)
+          : bTitle.localeCompare(aTitle);
+      }
+
+      const aDate = new Date(a.querySelector('.blog-date').textContent);
+      const bDate = new Date(b.querySelector('.blog-date').textContent);
+      return sortBy === 'newest' ? bDate - aDate : aDate - bDate;
+    });
+  }
+
+  function renderVisibleCards() {
+    const filtered = blogCards.filter(applyFilters);
+    const sorted = sortCards(filtered);
+    const toShow = sorted.slice(0, visibleCount);
+
+    blogPostsContainer.innerHTML = '';
+    toShow.forEach(card => {
+      blogPostsContainer.appendChild(card);
+      card.style.display = 'flex';
+    });
+
+    // Hide unused cards
+    blogCards.forEach(card => {
+      if (!toShow.includes(card)) card.style.display = 'none';
+    });
+
+    if (visibleCount < sorted.length) {
+      observeLastCard();
+    }
+  }
+
+  function observeLastCard() {
+    const cards = blogPostsContainer.querySelectorAll('.blog-card');
+    const lastCard = cards[cards.length - 1];
+    if (!lastCard) return;
+
+    const observer = new IntersectionObserver((entries) => {
+      if (entries[0].isIntersecting) {
+        observer.unobserve(lastCard);
+        visibleCount += batchSize;
+        renderVisibleCards();
+      }
+    }, { threshold: 1 });
+
+    observer.observe(lastCard);
+  }
+
+  // Initialize
+  visibleCount = batchSize;
+  renderVisibleCards();
+
+  filterButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      filterButtons.forEach(btn => btn.classList.remove('active'));
+      button.classList.add('active');
+      currentCategory = button.getAttribute('data-category');
+      visibleCount = batchSize;
+      renderVisibleCards();
+    });
+  });
+
+  searchInput.addEventListener('input', () => {
+    visibleCount = batchSize;
+    renderVisibleCards();
+  });
+
+  sortSelect.addEventListener('change', () => {
+    visibleCount = batchSize;
+    renderVisibleCards();
+  });
+</script>
+
 </body>
 </html>
+
