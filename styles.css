@@ -84,8 +84,8 @@ body {
   text-transform: uppercase;
 }
 
-main {
-    padding-top: 120px;
+.home-main {
+  padding-top: 120px;
 }
 
 footer {
@@ -433,76 +433,6 @@ footer a {
     }
 }
 
-/* .featured-recipes {
-    padding: 0px 10px;
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-.featured-recipes h2 { 
-    font-size: 50px;
-    margin-bottom: 40px;
-    color: #121313
-}
-
-.recipes-grid {
-    display: flex;
-    gap: 60px;
-    justify-content: center;
-}
-
-.recipe {
-    width: 300px;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 2px 4px rgba(227, 210, 232, 1);
-    background-color: rgba(227, 210, 232, 0.4); 
-    margin-bottom: 60px;
-}
-
-.recipe img {
-    width: 100%;
-    height: auto;
-}
-
-.recipe h3 {
-    font-size: 24px;
-    color: #2e2b4f; 
-    margin-top: 10px;
-}
-
-.recipe p {
-    font-size: 18px;
-    color: #505759; 
-    margin-top: 10px;
-}
-
-.newsletter {
-    padding: 40px 20px;
-    text-align: center;
-}
-
-.newsletter h2 {
-    color: #020303; 
-}
-
-.newsletter form {
-    display: flex;
-    gap: 10px;
-    justify-content: center;
-}
-
-.newsletter input[type="email"] {
-    border: 1px solid #020303; 
-}
-
-.newsletter button[type="submit"] {
-    background-color: #2e2b4f; 
-    color: #fff; 
-} */
-
-
 .page-container {
   max-width: 1000px;   /* This sets the width of your content */
   margin: 0 auto;      /* This centers it horizontally */
@@ -702,3 +632,39 @@ footer a {
   object-fit: cover;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
+
+.recipes-hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+  text-align: center;
+  background-color: #FAFAF6;
+  padding: 60px 20px;
+}
+
+.recipes-hero-content h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.8rem;
+  color: #2E2B4F;
+  margin-bottom: 10px;
+}
+
+.recipes-hero-content p {
+  font-size: 1.1rem;
+  color: #444;
+  margin-bottom: 20px;
+}
+
+/* Scoped Recipes Page Button Style */
+.recipes-page .outlined-btn {
+  color: #F2C6C2; 
+  border: 2px solid #F2C6C2; /* Soft Charcoal border */
+  background-color: transparent;
+}
+
+.recipes-page .outlined-btn:hover {
+  background-color: #F2C6C2;
+  color: #FAFAF6;
+}
+
