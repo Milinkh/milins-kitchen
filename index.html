@@ -18,9 +18,8 @@
           </a>
         </div>
         <div class="top-header-right">
-          <a href="https://www.instagram.com" target="_blank"><img src="images/instagram.png" alt="Instagram"></a>
-          <a href="https://www.facebook.com" target="_blank"><img src="images/facebook.png" alt="Facebook"></a>
-          <a href="https://www.twitter.com" target="_blank"><img src="images/x.png" alt="Twitter"></a>
+ <!--         <a href="https://www.instagram.com" target="_blank"><img src="images/instagram.png" alt="Instagram"></a>
+          <a href="https://www.twitter.com" target="_blank"><img src="images/x.png" alt="Twitter"></a> -->
         </div>
       </div>
     </div>
@@ -40,7 +39,7 @@
 
           <ul class="nav-right">
               <li><a href="#">About</a></li>
-              <li><a href="#">Restaurant Replica</a></li>
+ <!--             <li><a href="#">Restaurant Replica</a></li>  -->
           </ul>
         </nav>
       </div>
@@ -62,16 +61,16 @@
         <!-- Slide 2: Latest Blog Post -->
         <div class="carousel-slide slide-split slide-blog">
           <div class="slide-text">
-            <h2 class="blog-heading">Latest Blog Post</h2>
-            <p>The Menu Experience: Three Ways to Make Dining Out Better</p>
-            <a href="blog-post.html" class="outlined-btn">Read Blog Post</a>
+            <h2 class="blog-heading">Why Does Paying for Dinner Feel Clunky?</h2>
+            <a href="blog/blog-post-clunky-checkout.html" class="outlined-btn">Read Blog Post</a>
           </div>
-          <div class="slide-image">
-            <img src="images/chickpea-dish.png" alt="Latest Blog Post">
-          </div>
+          <!-- Placeholder for image -->
+          <!-- <div class="slide-image">
+            <img src="images/[your-image].png" alt="Why Does Paying for Dinner Still Feel So Clunky?">
+          </div> -->
         </div>
 
-        <!-- Slide 3: Featured Recipe -->
+        <!-- Slide 3: Featured Recipe 
         <div class="carousel-slide slide-split slide-recipe">
           <div class="slide-image">
             <img src="images/chickpea-dish.png" alt="Featured Recipe">
@@ -81,6 +80,11 @@
             <p>Restaurant-style toast made at home.</p>
             <a href="#" class="outlined-btn">View Recipe</a>
           </div>
+        </div> -->
+
+        <!-- Slide 3: Placeholder -->
+        <div class="carousel-slide slide-recipe" style="display: flex; align-items: center; justify-content: center;">
+          <h2 class="blog-heading" style="text-align: center;">Recipes Coming Soon...</h2>
         </div>
 
       </div> <!-- ✅ End of .carousel-track -->
@@ -101,7 +105,8 @@
         </div>
         <div class="about-text">
           <h2>Hi, I’m Milin</h2>
-          <p>This is my kitchen — a space where I explore flavor, culture, and the joy of cooking. Whether it's a simple recipe or a story stirred in, there's always something to taste and talk about.</p>
+          <p>I believe memorable meals don't begin with the food—they start with the invisible details. The thoughtful touches that make you feel at ease, the quiet preparation that makes everything flow effortlessly.</p>
+          <p>Let's discover together what happens behind the scenes to create those moments you can't stop thinking about.</p>
           <a href="#" class="about-link">Read More →</a>
         </div>
       </div>
@@ -110,31 +115,46 @@
     <section class="featured-blog-categories">
       <div class="blog-grid-row">
 
-        <div class="blog-column">
-          <a href="blog.html#service" class="category-btn">Service</a>
-          <a href="blog-post.html" class="blog-card">
-            <img src="images/latest_blog_post copy.png" alt="Post Thumbnail">
+        <!-- Experience Blog Card -->
+        <div class="blog-card" data-category="experience">
+          <div class="blog-card-image">
+            <img src="images/latest_blog_post copy.png" alt="The Menu Experience">
+            <span class="blog-category-label">Experience</span>
+          </div>
+          <div class="blog-card-content">
+            <p class="blog-date">June 5, 2025</p>
             <h3>The Menu Experience</h3>
             <p>Three ways to make dining out better.</p>
-          </a>
+            <a href="blog/blog-post-menu-experience.html" class="read-more">Read More →</a>
+          </div>
         </div>
 
-        <div class="blog-column">
-          <a href="blog.html#innovation" class="category-btn">Innovation</a>
-          <a href="blog-post.html" class="blog-card">
-            <img src="images/spheres copy.png" alt="Post Thumbnail">
-            <h3>Designing with Flavor</h3>
-            <p>What food layout can teach us about focus and flow.</p>
-          </a>
+        <!-- Restaurant Blog Card -->
+        <div class="blog-card" data-category="restaurant">
+          <div class="blog-card-image">
+            <img src="images/banner.png" alt="What Customers Don’t See—But Always Feel">
+            <span class="blog-category-label">Restaurant</span>
+          </div>
+          <div class="blog-card-content">
+            <p class="blog-date">July 09, 2025</p>
+            <h3>What Customers Don’t See—But Always Feel</h3>
+            <p>How behind-the-scenes prep shapes effortless experiences.</p>
+            <a href="blog/blog-post-customers-see-don't-feel.html" class="read-more">Read More →</a>
+          </div>
         </div>
 
-        <div class="blog-column">
-          <a href="blog.html#kitchen-notes" class="category-btn">Kitchen Notes</a>
-          <a href="blog-post.html" class="blog-card">
-            <img src="images/chai copy.png" alt="Post Thumbnail">
-            <h3>Chai as a Moment</h3>
-            <p>On slowness, sipping, and the kitchen as a reset space.</p>
-          </a>
+        <!-- Technology Blog Card -->
+        <div class="blog-card" data-category="technology">
+          <div class="blog-card-image">
+            <img src="images/banner.png" alt="Why Does Paying for Dinner Still Feel So Clunky?">
+            <span class="blog-category-label">Technology</span>
+          </div>
+          <div class="blog-card-content">
+            <p class="blog-date">July 09, 2025</p>
+            <h3>Why Does Paying for Dinner Still Feel So Clunky?</h3>
+            <p>How Square’s POS redesign fixes the awkward, post-meal payment experience.</p>
+            <a href="blog/blog-post-clunky-checkout.html" class="read-more">Read More →</a>
+          </div>
         </div>
 
       </div>
@@ -143,11 +163,6 @@
         <a href="blog.html">Explore More →</a>
       </div>
     </section>
-
-
-
-
-
 
     <!-- 
     <section class="featured-recipes">
@@ -177,17 +192,8 @@
 
       <footer>
         <div class="social-icons">
-            <a href="https://www.instagram.com" target="_blank">
-                <img src="images/instagram.png" alt="Instagram Logo">
-            </a>
-            <!-- 
-            <a href="https://www.facebook.com" target="_blank">
-                <img src="images/facebook.png" alt="Facebook Logo">
-            </a>
-	        <a href="https://www.twitter.com" target="_blank">
-                <img src="images/x.png" alt="X Logo">
-            </a> 
-            -->
+ <!--           <a href="https://www.instagram.com" target="_blank"><img src="images/instagram.png" alt="Instagram Logo"></a>
+            <a href="https://www.twitter.com" target="_blank"><img src="images/x.png" alt="X Logo"></a> -->
         </div>
       </footer>
 
