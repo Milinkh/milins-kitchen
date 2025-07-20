@@ -27,19 +27,19 @@
     <!-- Main Navigation -->
     <header class="main-header">
       <div class="page-container">
-        <nav class="main-nav">
+        <button class="hamburger" id="hamburger">&#9776;</button>
+
+        <div class="nav-center">
+          <a href="index.html" class="site-title">Milin's Kitchen</a>
+        </div>
+
+        <nav class="main-nav" id="mainNav">
           <ul class="nav-left">
-              <li><a href="recipes.html">Recipes</a></li>
-              <li><a href="blog.html">Blog</a></li>
+            <li><a href="recipes.html">Recipes</a></li>
+            <li><a href="blog.html">Blog</a></li>
           </ul>
-
-          <div class="nav-center">
-              <a href="index.html" class="site-title">Milin's Kitchen</a>
-          </div>
-
           <ul class="nav-right">
-              <li><a href="#">About</a></li>
- <!--             <li><a href="#">Restaurant Replica</a></li>  -->
+            <li><a href="#">About</a></li>
           </ul>
         </nav>
       </div>
@@ -231,9 +231,14 @@
       });
     </script>
 
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const mainNav = document.getElementById('mainNav');
 
-
-
+  hamburger.addEventListener('click', () => {
+    mainNav.classList.toggle('active');
+  });
+</script>
 
 
 </body>
